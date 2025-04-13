@@ -17,9 +17,6 @@ let sessionBase64 = "";
 
 app.get("/", (req, res) => {
   const adminKey = req.query.key;
-  if (adminKey !== "mrtech123") {
-    return res.send("Access Denied: Admins only");
-  }
 
   res.render("index", { qrImage, sessionBase64 });
 });
